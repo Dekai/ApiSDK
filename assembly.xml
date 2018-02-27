@@ -1,0 +1,23 @@
+<assembly>
+  <id>bundle</id>
+  <formats>
+    <format>tar.gz</format>
+  </formats>
+  <fileSets>
+    <fileSet>
+      <directory>${project.build.directory}/lib</directory>
+      <outputDirectory>lib</outputDirectory>
+      <includes>
+        <include>*.jar</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <files>
+    <file>
+        <source>${project.build.directory}/${artifactId}-${version}.${packaging}</source>
+    </file>
+    <file>
+        <source>pom.xml</source>
+    </file>
+  </files>
+</assembly>
