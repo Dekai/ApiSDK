@@ -41,9 +41,9 @@ public class ExternalTrans extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("474af05e-0f32-4687-87fb-3a29c07b8a1a", new OperationConfig("/labs/proxy/qkr2/internal/api2/externalTrans", Action.create, Arrays.asList(""), Arrays.asList("")));
-		operationConfigs.put("4a26e198-94a2-49bf-904d-ba08b5e9628d", new OperationConfig("/labs/proxy/qkr2/internal/api2/externalTrans", Action.query, Arrays.asList(""), Arrays.asList("")));
-		operationConfigs.put("319ae648-766b-4116-9fcc-258e5c2440e9", new OperationConfig("/labs/proxy/qkr2/internal/api2/externalTrans/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("95294e77-bfee-412e-a93e-55ad55f2853b", new OperationConfig("/labs/proxy/qkr2/internal/api2/externalTrans", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("47dc47e2-48b2-4f75-81c3-0d969954b68f", new OperationConfig("/labs/proxy/qkr2/internal/api2/externalTrans", Action.query, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("147f2866-38be-462c-975e-b9ff7575e7a0", new OperationConfig("/labs/proxy/qkr2/internal/api2/externalTrans/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public ExternalTrans() {
@@ -100,7 +100,7 @@ public class ExternalTrans extends BaseObject  {
 	public static ExternalTrans create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new ExternalTrans(BaseObject.executeOperation(auth, "474af05e-0f32-4687-87fb-3a29c07b8a1a", new ExternalTrans(map)));
+		return new ExternalTrans(BaseObject.executeOperation(auth, "95294e77-bfee-412e-a93e-55ad55f2853b", new ExternalTrans(map)));
 	}
 
 
@@ -143,7 +143,7 @@ public class ExternalTrans extends BaseObject  {
 
 		ExternalTrans val = new ExternalTrans();
 		if (query != null)  val.putAll(query);
-		return new ExternalTrans(BaseObject.executeOperation(auth, "4a26e198-94a2-49bf-904d-ba08b5e9628d", val));
+		return new ExternalTrans(BaseObject.executeOperation(auth, "47dc47e2-48b2-4f75-81c3-0d969954b68f", val));
 	}
 
 
@@ -213,7 +213,7 @@ public class ExternalTrans extends BaseObject  {
 		ExternalTrans val = new ExternalTrans();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new ExternalTrans(BaseObject.executeOperation(auth, "319ae648-766b-4116-9fcc-258e5c2440e9", val));
+		return new ExternalTrans(BaseObject.executeOperation(auth, "147f2866-38be-462c-975e-b9ff7575e7a0", val));
 	}
 
 }

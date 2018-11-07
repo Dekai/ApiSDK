@@ -41,10 +41,10 @@ public class Trans extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("ebeb80e4-0acc-4982-a4e8-a329cc55f3bc", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("c82241cb-6f1c-49cb-bdff-e2733aaad8c2", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans", Action.query, Arrays.asList("from","to"), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("8b9d5631-126d-40ce-8544-3711e2d5c854", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("c01801f7-160e-462d-8303-7355601a2b53", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("7371f682-3855-42bc-ba91-782c68607a1b", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("88af88d2-a737-4c86-b65b-38509fc8b566", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans", Action.query, Arrays.asList("from","to"), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("eb7bd15a-4619-4ba3-bd7f-f506f3435023", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("a14632ae-0743-4839-81bd-7260a7b52333", new OperationConfig("/labs/proxy/qkr2/internal/api2/trans/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public Trans() {
@@ -101,7 +101,7 @@ public class Trans extends BaseObject  {
 	public static Trans create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new Trans(BaseObject.executeOperation(auth, "ebeb80e4-0acc-4982-a4e8-a329cc55f3bc", new Trans(map)));
+		return new Trans(BaseObject.executeOperation(auth, "7371f682-3855-42bc-ba91-782c68607a1b", new Trans(map)));
 	}
 
 
@@ -144,7 +144,7 @@ public class Trans extends BaseObject  {
 
 		Trans val = new Trans();
 		if (query != null)  val.putAll(query);
-		return new Trans(BaseObject.executeOperation(auth, "c82241cb-6f1c-49cb-bdff-e2733aaad8c2", val));
+		return new Trans(BaseObject.executeOperation(auth, "88af88d2-a737-4c86-b65b-38509fc8b566", val));
 	}
 
 
@@ -214,7 +214,7 @@ public class Trans extends BaseObject  {
 		Trans val = new Trans();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Trans(BaseObject.executeOperation(auth, "8b9d5631-126d-40ce-8544-3711e2d5c854", val));
+		return new Trans(BaseObject.executeOperation(auth, "eb7bd15a-4619-4ba3-bd7f-f506f3435023", val));
 	}
 
 
@@ -228,7 +228,7 @@ public class Trans extends BaseObject  {
 	public Trans update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "c01801f7-160e-462d-8303-7355601a2b53", this);
+		BaseObject object = BaseObject.executeOperation(null, "a14632ae-0743-4839-81bd-7260a7b52333", this);
 		this.putAll(object);
 		return this;
 	}
@@ -245,7 +245,7 @@ public class Trans extends BaseObject  {
 	public Trans update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "c01801f7-160e-462d-8303-7355601a2b53", this);
+		BaseObject object = BaseObject.executeOperation(auth, "a14632ae-0743-4839-81bd-7260a7b52333", this);
 		this.putAll(object);
 		return this;
 	}

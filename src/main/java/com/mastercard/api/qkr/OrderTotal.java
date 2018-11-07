@@ -41,7 +41,7 @@ public class OrderTotal extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("25ebfcd2-ed99-4266-993d-962b3b255aeb", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderTotal", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("a42a70d4-e353-4ac7-9781-d5be9303e272", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderTotal", Action.create, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public OrderTotal() {
@@ -98,7 +98,7 @@ public class OrderTotal extends BaseObject  {
 	public static OrderTotal create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new OrderTotal(BaseObject.executeOperation(auth, "25ebfcd2-ed99-4266-993d-962b3b255aeb", new OrderTotal(map)));
+		return new OrderTotal(BaseObject.executeOperation(auth, "a42a70d4-e353-4ac7-9781-d5be9303e272", new OrderTotal(map)));
 	}
 
 

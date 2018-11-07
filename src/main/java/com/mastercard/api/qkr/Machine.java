@@ -41,7 +41,7 @@ public class Machine extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("d8221818-84ae-41b9-bc92-d5a5d21b6c33", new OperationConfig("/labs/proxy/qkr2/internal/api2/machine/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("b0beabd0-e0e8-4f28-9d6e-25052ef70a24", new OperationConfig("/labs/proxy/qkr2/internal/api2/machine/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public Machine() {
@@ -138,7 +138,7 @@ public class Machine extends BaseObject  {
 		Machine val = new Machine();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Machine(BaseObject.executeOperation(auth, "d8221818-84ae-41b9-bc92-d5a5d21b6c33", val));
+		return new Machine(BaseObject.executeOperation(auth, "b0beabd0-e0e8-4f28-9d6e-25052ef70a24", val));
 	}
 
 }

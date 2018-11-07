@@ -41,7 +41,7 @@ public class ForgottenPassword extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("2d504f2b-20be-4d06-addd-b5566bc1bffc", new OperationConfig("/labs/proxy/qkr2/internal/api2/forgottenPassword", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("6c3ca196-6d9b-43d4-acc7-d6168e4704ee", new OperationConfig("/labs/proxy/qkr2/internal/api2/forgottenPassword", Action.create, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public ForgottenPassword() {
@@ -98,7 +98,7 @@ public class ForgottenPassword extends BaseObject  {
 	public static ForgottenPassword create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new ForgottenPassword(BaseObject.executeOperation(auth, "2d504f2b-20be-4d06-addd-b5566bc1bffc", new ForgottenPassword(map)));
+		return new ForgottenPassword(BaseObject.executeOperation(auth, "6c3ca196-6d9b-43d4-acc7-d6168e4704ee", new ForgottenPassword(map)));
 	}
 
 

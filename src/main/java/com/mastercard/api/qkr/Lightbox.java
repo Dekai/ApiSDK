@@ -41,8 +41,8 @@ public class Lightbox extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("7872de4e-5a81-4489-8938-1e524b2d4fa3", new OperationConfig("/labs/proxy/qkr2/internal/api2/lightbox", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("a678bf4a-6f7d-473b-9498-b38527a14c87", new OperationConfig("/labs/proxy/qkr2/internal/api2/lightbox/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("4f6a55a6-f935-4aa0-9cf0-6861c3e5dd6b", new OperationConfig("/labs/proxy/qkr2/internal/api2/lightbox", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("246c9846-b350-4c23-8f69-7a8813c94033", new OperationConfig("/labs/proxy/qkr2/internal/api2/lightbox/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public Lightbox() {
@@ -99,7 +99,7 @@ public class Lightbox extends BaseObject  {
 	public static Lightbox create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new Lightbox(BaseObject.executeOperation(auth, "7872de4e-5a81-4489-8938-1e524b2d4fa3", new Lightbox(map)));
+		return new Lightbox(BaseObject.executeOperation(auth, "4f6a55a6-f935-4aa0-9cf0-6861c3e5dd6b", new Lightbox(map)));
 	}
 
 
@@ -175,7 +175,7 @@ public class Lightbox extends BaseObject  {
 		Lightbox val = new Lightbox();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Lightbox(BaseObject.executeOperation(auth, "a678bf4a-6f7d-473b-9498-b38527a14c87", val));
+		return new Lightbox(BaseObject.executeOperation(auth, "246c9846-b350-4c23-8f69-7a8813c94033", val));
 	}
 
 }

@@ -41,7 +41,7 @@ public class UserSession extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("418a18ad-5721-4f48-b4f1-c721f51e91d3", new OperationConfig("/labs/proxy/qkr2/internal/api2/userSession", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("d4239f9a-e6a3-40f7-9c94-39270ea08b91", new OperationConfig("/labs/proxy/qkr2/internal/api2/userSession", Action.create, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public UserSession() {
@@ -98,7 +98,7 @@ public class UserSession extends BaseObject  {
 	public static UserSession create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new UserSession(BaseObject.executeOperation(auth, "418a18ad-5721-4f48-b4f1-c721f51e91d3", new UserSession(map)));
+		return new UserSession(BaseObject.executeOperation(auth, "d4239f9a-e6a3-40f7-9c94-39270ea08b91", new UserSession(map)));
 	}
 
 

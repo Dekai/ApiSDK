@@ -41,7 +41,7 @@ public class UpdatePassword extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("9d58a60b-6ccb-4a49-8b76-89fc41b52699", new OperationConfig("/labs/proxy/qkr2/internal/api2/updatePassword", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("632c2d4a-3506-4a49-ab5d-c4ec5b5065ff", new OperationConfig("/labs/proxy/qkr2/internal/api2/updatePassword", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public UpdatePassword() {
@@ -81,7 +81,7 @@ public class UpdatePassword extends BaseObject  {
 	public UpdatePassword update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "9d58a60b-6ccb-4a49-8b76-89fc41b52699", this);
+		BaseObject object = BaseObject.executeOperation(null, "632c2d4a-3506-4a49-ab5d-c4ec5b5065ff", this);
 		this.putAll(object);
 		return this;
 	}
@@ -98,7 +98,7 @@ public class UpdatePassword extends BaseObject  {
 	public UpdatePassword update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "9d58a60b-6ccb-4a49-8b76-89fc41b52699", this);
+		BaseObject object = BaseObject.executeOperation(auth, "632c2d4a-3506-4a49-ab5d-c4ec5b5065ff", this);
 		this.putAll(object);
 		return this;
 	}

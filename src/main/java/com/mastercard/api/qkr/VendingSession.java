@@ -41,8 +41,8 @@ public class VendingSession extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("d1e2debb-39d8-48d7-8888-9bb5f4ee4b2b", new OperationConfig("/labs/proxy/qkr2/internal/api2/vendingSession", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("0e5a0e49-97de-4b4b-878e-fade396c730b", new OperationConfig("/labs/proxy/qkr2/internal/api2/vendingSession/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("d153964e-033f-4eb0-94f7-f2441b236457", new OperationConfig("/labs/proxy/qkr2/internal/api2/vendingSession", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("11e5ba51-a46e-463c-8818-7f7d56e460ee", new OperationConfig("/labs/proxy/qkr2/internal/api2/vendingSession/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public VendingSession() {
@@ -99,7 +99,7 @@ public class VendingSession extends BaseObject  {
 	public static VendingSession create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new VendingSession(BaseObject.executeOperation(auth, "d1e2debb-39d8-48d7-8888-9bb5f4ee4b2b", new VendingSession(map)));
+		return new VendingSession(BaseObject.executeOperation(auth, "d153964e-033f-4eb0-94f7-f2441b236457", new VendingSession(map)));
 	}
 
 
@@ -120,7 +120,7 @@ public class VendingSession extends BaseObject  {
 	public VendingSession delete()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "0e5a0e49-97de-4b4b-878e-fade396c730b", this);
+		BaseObject object = BaseObject.executeOperation(null, "11e5ba51-a46e-463c-8818-7f7d56e460ee", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -138,7 +138,7 @@ public class VendingSession extends BaseObject  {
 	public VendingSession delete(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "0e5a0e49-97de-4b4b-878e-fade396c730b", this);
+		BaseObject object = BaseObject.executeOperation(auth, "11e5ba51-a46e-463c-8818-7f7d56e460ee", this);
 		this.clear();
 		this.putAll(object);
 		return this;

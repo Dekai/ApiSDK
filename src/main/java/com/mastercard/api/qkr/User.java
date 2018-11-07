@@ -41,9 +41,9 @@ public class User extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("2b19e925-87d8-4bee-9d0a-76f14b9bd348", new OperationConfig("/labs/proxy/qkr2/internal/api2/user", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("d86ef8a7-a655-42ae-ac40-0e4c23a16a74", new OperationConfig("/labs/proxy/qkr2/internal/api2/user", Action.query, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("14e52990-b041-4446-8f16-0e6a561db655", new OperationConfig("/labs/proxy/qkr2/internal/api2/user", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("e4b1e908-4d1b-4305-b85d-b06e19f16ee1", new OperationConfig("/labs/proxy/qkr2/internal/api2/user", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("6819f187-0fbb-4dbd-8563-117369eb65d9", new OperationConfig("/labs/proxy/qkr2/internal/api2/user", Action.query, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("9d34839a-7597-4945-9e05-93aabb7c9b10", new OperationConfig("/labs/proxy/qkr2/internal/api2/user", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public User() {
@@ -100,7 +100,7 @@ public class User extends BaseObject  {
 	public static User create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new User(BaseObject.executeOperation(auth, "2b19e925-87d8-4bee-9d0a-76f14b9bd348", new User(map)));
+		return new User(BaseObject.executeOperation(auth, "e4b1e908-4d1b-4305-b85d-b06e19f16ee1", new User(map)));
 	}
 
 
@@ -143,7 +143,7 @@ public class User extends BaseObject  {
 
 		User val = new User();
 		if (query != null)  val.putAll(query);
-		return new User(BaseObject.executeOperation(auth, "d86ef8a7-a655-42ae-ac40-0e4c23a16a74", val));
+		return new User(BaseObject.executeOperation(auth, "6819f187-0fbb-4dbd-8563-117369eb65d9", val));
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class User extends BaseObject  {
 	public User update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "14e52990-b041-4446-8f16-0e6a561db655", this);
+		BaseObject object = BaseObject.executeOperation(null, "9d34839a-7597-4945-9e05-93aabb7c9b10", this);
 		this.putAll(object);
 		return this;
 	}
@@ -173,7 +173,7 @@ public class User extends BaseObject  {
 	public User update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "14e52990-b041-4446-8f16-0e6a561db655", this);
+		BaseObject object = BaseObject.executeOperation(auth, "9d34839a-7597-4945-9e05-93aabb7c9b10", this);
 		this.putAll(object);
 		return this;
 	}

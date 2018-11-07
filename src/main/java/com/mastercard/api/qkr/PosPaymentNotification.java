@@ -41,7 +41,7 @@ public class PosPaymentNotification extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("e4e15092-dbe0-45cf-9f7f-d1f7638b3768", new OperationConfig("/labs/proxy/qkr2/internal/api2/posPaymentNotification/pat", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("d048024b-e6ee-4803-aad9-8a79e0dc8365", new OperationConfig("/labs/proxy/qkr2/internal/api2/posPaymentNotification/pat", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public PosPaymentNotification() {
@@ -98,7 +98,7 @@ public class PosPaymentNotification extends BaseObject  {
 	public static PosPaymentNotification create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new PosPaymentNotification(BaseObject.executeOperation(auth, "e4e15092-dbe0-45cf-9f7f-d1f7638b3768", new PosPaymentNotification(map)));
+		return new PosPaymentNotification(BaseObject.executeOperation(auth, "d048024b-e6ee-4803-aad9-8a79e0dc8365", new PosPaymentNotification(map)));
 	}
 
 

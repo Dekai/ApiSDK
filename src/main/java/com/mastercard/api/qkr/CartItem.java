@@ -41,9 +41,9 @@ public class CartItem extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("153ef109-f654-4cbc-bf3a-0a6bb3eb5d7c", new OperationConfig("/labs/proxy/qkr2/internal/api2/cartItem", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("b51f2fd6-d907-43de-9f95-9e2bdf26841d", new OperationConfig("/labs/proxy/qkr2/internal/api2/cartItem/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("50e5aabf-8812-4138-8bb1-5181560574aa", new OperationConfig("/labs/proxy/qkr2/internal/api2/cartItem/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("358f0fb0-fa9f-425e-b390-db41a9368408", new OperationConfig("/labs/proxy/qkr2/internal/api2/cartItem", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("99c4a692-f9fe-411c-b78f-5e6ac5c9f90c", new OperationConfig("/labs/proxy/qkr2/internal/api2/cartItem/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("9eea740f-db7e-449d-9b5b-7bfbc8b6c421", new OperationConfig("/labs/proxy/qkr2/internal/api2/cartItem/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public CartItem() {
@@ -100,7 +100,7 @@ public class CartItem extends BaseObject  {
 	public static CartItem create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new CartItem(BaseObject.executeOperation(auth, "153ef109-f654-4cbc-bf3a-0a6bb3eb5d7c", new CartItem(map)));
+		return new CartItem(BaseObject.executeOperation(auth, "358f0fb0-fa9f-425e-b390-db41a9368408", new CartItem(map)));
 	}
 
 
@@ -121,7 +121,7 @@ public class CartItem extends BaseObject  {
 	public CartItem delete()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "b51f2fd6-d907-43de-9f95-9e2bdf26841d", this);
+		BaseObject object = BaseObject.executeOperation(null, "99c4a692-f9fe-411c-b78f-5e6ac5c9f90c", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -139,7 +139,7 @@ public class CartItem extends BaseObject  {
 	public CartItem delete(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "b51f2fd6-d907-43de-9f95-9e2bdf26841d", this);
+		BaseObject object = BaseObject.executeOperation(auth, "99c4a692-f9fe-411c-b78f-5e6ac5c9f90c", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -225,7 +225,7 @@ public class CartItem extends BaseObject  {
 	public CartItem update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "50e5aabf-8812-4138-8bb1-5181560574aa", this);
+		BaseObject object = BaseObject.executeOperation(null, "9eea740f-db7e-449d-9b5b-7bfbc8b6c421", this);
 		this.putAll(object);
 		return this;
 	}
@@ -242,7 +242,7 @@ public class CartItem extends BaseObject  {
 	public CartItem update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "50e5aabf-8812-4138-8bb1-5181560574aa", this);
+		BaseObject object = BaseObject.executeOperation(auth, "9eea740f-db7e-449d-9b5b-7bfbc8b6c421", this);
 		this.putAll(object);
 		return this;
 	}

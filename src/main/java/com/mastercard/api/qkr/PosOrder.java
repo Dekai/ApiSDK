@@ -41,8 +41,8 @@ public class PosOrder extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("7a0bb138-cb51-4157-9c5d-4010b5365615", new OperationConfig("/labs/proxy/qkr2/internal/api2/posOrder", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("100763af-9493-4142-9a34-a71f913759e8", new OperationConfig("/labs/proxy/qkr2/internal/api2/posOrder/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("983f6b7d-abbb-4cbf-860a-619111635fc4", new OperationConfig("/labs/proxy/qkr2/internal/api2/posOrder", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("1a8dd68f-d1ce-4e5e-84a1-f9b100fe4dce", new OperationConfig("/labs/proxy/qkr2/internal/api2/posOrder/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public PosOrder() {
@@ -99,7 +99,7 @@ public class PosOrder extends BaseObject  {
 	public static PosOrder create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new PosOrder(BaseObject.executeOperation(auth, "7a0bb138-cb51-4157-9c5d-4010b5365615", new PosOrder(map)));
+		return new PosOrder(BaseObject.executeOperation(auth, "983f6b7d-abbb-4cbf-860a-619111635fc4", new PosOrder(map)));
 	}
 
 
@@ -118,7 +118,7 @@ public class PosOrder extends BaseObject  {
 	public PosOrder update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "100763af-9493-4142-9a34-a71f913759e8", this);
+		BaseObject object = BaseObject.executeOperation(null, "1a8dd68f-d1ce-4e5e-84a1-f9b100fe4dce", this);
 		this.putAll(object);
 		return this;
 	}
@@ -135,7 +135,7 @@ public class PosOrder extends BaseObject  {
 	public PosOrder update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "100763af-9493-4142-9a34-a71f913759e8", this);
+		BaseObject object = BaseObject.executeOperation(auth, "1a8dd68f-d1ce-4e5e-84a1-f9b100fe4dce", this);
 		this.putAll(object);
 		return this;
 	}

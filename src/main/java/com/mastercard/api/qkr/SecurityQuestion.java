@@ -41,7 +41,7 @@ public class SecurityQuestion extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("b63938be-5351-4ba0-b991-d790becd7be6", new OperationConfig("/labs/proxy/qkr2/internal/api2/securityQuestion", Action.query, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("ea63983e-8da3-4955-90fd-3269481c8008", new OperationConfig("/labs/proxy/qkr2/internal/api2/securityQuestion", Action.query, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public SecurityQuestion() {
@@ -105,7 +105,7 @@ public class SecurityQuestion extends BaseObject  {
 
 		SecurityQuestion val = new SecurityQuestion();
 		if (query != null)  val.putAll(query);
-		return new SecurityQuestion(BaseObject.executeOperation(auth, "b63938be-5351-4ba0-b991-d790becd7be6", val));
+		return new SecurityQuestion(BaseObject.executeOperation(auth, "ea63983e-8da3-4955-90fd-3269481c8008", val));
 	}
 }
 

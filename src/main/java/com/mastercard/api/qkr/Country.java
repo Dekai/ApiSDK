@@ -41,8 +41,8 @@ public class Country extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("02d912d9-370f-409d-8311-6e4fd1fe1066", new OperationConfig("/labs/proxy/qkr2/internal/api2/country", Action.query, Arrays.asList(""), Arrays.asList("")));
-		operationConfigs.put("9d2011c0-2ed9-4dc1-8b0a-2b6994581f5d", new OperationConfig("/labs/proxy/qkr2/internal/api2/country/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("c27d88ee-5103-49cd-a1fa-a2664bd862c7", new OperationConfig("/labs/proxy/qkr2/internal/api2/country", Action.query, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("f3f3a351-053c-4ece-860c-b9d3111132ab", new OperationConfig("/labs/proxy/qkr2/internal/api2/country/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public Country() {
@@ -106,7 +106,7 @@ public class Country extends BaseObject  {
 
 		Country val = new Country();
 		if (query != null)  val.putAll(query);
-		return new Country(BaseObject.executeOperation(auth, "02d912d9-370f-409d-8311-6e4fd1fe1066", val));
+		return new Country(BaseObject.executeOperation(auth, "c27d88ee-5103-49cd-a1fa-a2664bd862c7", val));
 	}
 
 
@@ -176,7 +176,7 @@ public class Country extends BaseObject  {
 		Country val = new Country();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Country(BaseObject.executeOperation(auth, "9d2011c0-2ed9-4dc1-8b0a-2b6994581f5d", val));
+		return new Country(BaseObject.executeOperation(auth, "f3f3a351-053c-4ece-860c-b9d3111132ab", val));
 	}
 
 }

@@ -41,9 +41,9 @@ public class Cart extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("85c1479c-4883-4a82-88f2-016d9ba2e4a1", new OperationConfig("/labs/proxy/qkr2/internal/api2/cart/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("0a32739e-c513-4a09-979e-14e15890463d", new OperationConfig("/labs/proxy/qkr2/internal/api2/cart", Action.query, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("26e8b964-de2d-43f3-a833-23da42aaa71e", new OperationConfig("/labs/proxy/qkr2/internal/api2/cart/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("b6ff9ec8-035e-4e8e-8421-c6abd1faa7f7", new OperationConfig("/labs/proxy/qkr2/internal/api2/cart/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("4b7e7849-bf77-4a83-b969-2ebd1a443b45", new OperationConfig("/labs/proxy/qkr2/internal/api2/cart", Action.query, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("0ab995a2-b8f5-4538-a437-e43872dab4b2", new OperationConfig("/labs/proxy/qkr2/internal/api2/cart/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public Cart() {
@@ -85,7 +85,7 @@ public class Cart extends BaseObject  {
 	public Cart delete()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "85c1479c-4883-4a82-88f2-016d9ba2e4a1", this);
+		BaseObject object = BaseObject.executeOperation(null, "b6ff9ec8-035e-4e8e-8421-c6abd1faa7f7", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -103,7 +103,7 @@ public class Cart extends BaseObject  {
 	public Cart delete(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "85c1479c-4883-4a82-88f2-016d9ba2e4a1", this);
+		BaseObject object = BaseObject.executeOperation(auth, "b6ff9ec8-035e-4e8e-8421-c6abd1faa7f7", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -213,7 +213,7 @@ public class Cart extends BaseObject  {
 
 		Cart val = new Cart();
 		if (query != null)  val.putAll(query);
-		return new Cart(BaseObject.executeOperation(auth, "0a32739e-c513-4a09-979e-14e15890463d", val));
+		return new Cart(BaseObject.executeOperation(auth, "4b7e7849-bf77-4a83-b969-2ebd1a443b45", val));
 	}
 
 
@@ -283,7 +283,7 @@ public class Cart extends BaseObject  {
 		Cart val = new Cart();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Cart(BaseObject.executeOperation(auth, "26e8b964-de2d-43f3-a833-23da42aaa71e", val));
+		return new Cart(BaseObject.executeOperation(auth, "0ab995a2-b8f5-4538-a437-e43872dab4b2", val));
 	}
 
 }

@@ -41,8 +41,8 @@ public class Merchant extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("2193929c-2cf2-42bc-b89f-290c31a6e1eb", new OperationConfig("/labs/proxy/qkr2/internal/api2/merchant", Action.query, Arrays.asList("latitude","longitude","queryString"), Arrays.asList("")));
-		operationConfigs.put("08ecdf14-e92e-42e5-9cdd-5008f254a8a4", new OperationConfig("/labs/proxy/qkr2/internal/api2/merchant/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("72a40054-fffb-46d5-9200-1d7d04d10876", new OperationConfig("/labs/proxy/qkr2/internal/api2/merchant", Action.query, Arrays.asList("latitude","longitude","queryString"), Arrays.asList("")));
+		operationConfigs.put("d50a0f2d-3990-4d5c-a42f-2156e2930d29", new OperationConfig("/labs/proxy/qkr2/internal/api2/merchant/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public Merchant() {
@@ -106,7 +106,7 @@ public class Merchant extends BaseObject  {
 
 		Merchant val = new Merchant();
 		if (query != null)  val.putAll(query);
-		return new Merchant(BaseObject.executeOperation(auth, "2193929c-2cf2-42bc-b89f-290c31a6e1eb", val));
+		return new Merchant(BaseObject.executeOperation(auth, "72a40054-fffb-46d5-9200-1d7d04d10876", val));
 	}
 
 
@@ -176,7 +176,7 @@ public class Merchant extends BaseObject  {
 		Merchant val = new Merchant();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Merchant(BaseObject.executeOperation(auth, "08ecdf14-e92e-42e5-9cdd-5008f254a8a4", val));
+		return new Merchant(BaseObject.executeOperation(auth, "d50a0f2d-3990-4d5c-a42f-2156e2930d29", val));
 	}
 
 }

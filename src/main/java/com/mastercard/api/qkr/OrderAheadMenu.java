@@ -41,7 +41,7 @@ public class OrderAheadMenu extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("b7d49219-8ec5-4c9a-9dec-9f6545b2995f", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderAheadMenu/orderAhead", Action.query, Arrays.asList("menuTypes","merchantName","orderTime","siteName"), Arrays.asList("")));
+		operationConfigs.put("0518eb70-44d8-4690-93b1-2e0ffa6bbbae", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderAheadMenu/orderAhead", Action.query, Arrays.asList("menuTypes","merchantName","orderTime","siteName"), Arrays.asList("")));
 	}
 
 	public OrderAheadMenu() {
@@ -105,7 +105,7 @@ public class OrderAheadMenu extends BaseObject  {
 
 		OrderAheadMenu val = new OrderAheadMenu();
 		if (query != null)  val.putAll(query);
-		return new OrderAheadMenu(BaseObject.executeOperation(auth, "b7d49219-8ec5-4c9a-9dec-9f6545b2995f", val));
+		return new OrderAheadMenu(BaseObject.executeOperation(auth, "0518eb70-44d8-4690-93b1-2e0ffa6bbbae", val));
 	}
 }
 

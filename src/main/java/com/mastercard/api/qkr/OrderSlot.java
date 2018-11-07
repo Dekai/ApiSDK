@@ -41,7 +41,7 @@ public class OrderSlot extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("a65a31d3-0150-42f1-9e75-e6acbd2a752a", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderSlot/orderAhead", Action.query, Arrays.asList("merchantName","orderTime","orderType","shippingAddressId","siteName"), Arrays.asList("")));
+		operationConfigs.put("9f48477f-7f69-4ad1-9267-941a0d2de8ab", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderSlot/orderAhead", Action.query, Arrays.asList("merchantName","orderTime","orderType","shippingAddressId","siteName"), Arrays.asList("")));
 	}
 
 	public OrderSlot() {
@@ -105,7 +105,7 @@ public class OrderSlot extends BaseObject  {
 
 		OrderSlot val = new OrderSlot();
 		if (query != null)  val.putAll(query);
-		return new OrderSlot(BaseObject.executeOperation(auth, "a65a31d3-0150-42f1-9e75-e6acbd2a752a", val));
+		return new OrderSlot(BaseObject.executeOperation(auth, "9f48477f-7f69-4ad1-9267-941a0d2de8ab", val));
 	}
 }
 

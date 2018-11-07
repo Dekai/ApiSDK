@@ -41,7 +41,7 @@ public class Payment extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("f65499c9-5edd-4568-ae0e-4dfaa014f065", new OperationConfig("/labs/proxy/qkr2/internal/api2/payment", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("30ba1769-e23e-44c7-a4c3-e9316adc4dfa", new OperationConfig("/labs/proxy/qkr2/internal/api2/payment", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public Payment() {
@@ -98,7 +98,7 @@ public class Payment extends BaseObject  {
 	public static Payment create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new Payment(BaseObject.executeOperation(auth, "f65499c9-5edd-4568-ae0e-4dfaa014f065", new Payment(map)));
+		return new Payment(BaseObject.executeOperation(auth, "30ba1769-e23e-44c7-a4c3-e9316adc4dfa", new Payment(map)));
 	}
 
 

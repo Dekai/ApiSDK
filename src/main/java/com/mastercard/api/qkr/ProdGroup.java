@@ -41,7 +41,7 @@ public class ProdGroup extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("caac280c-6fc7-4dce-8e26-88b0c99a62e7", new OperationConfig("/labs/proxy/qkr2/internal/api2/prodGroup/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("00162333-8331-4a5a-a5d7-83ff9d1a58ae", new OperationConfig("/labs/proxy/qkr2/internal/api2/prodGroup/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public ProdGroup() {
@@ -138,7 +138,7 @@ public class ProdGroup extends BaseObject  {
 		ProdGroup val = new ProdGroup();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new ProdGroup(BaseObject.executeOperation(auth, "caac280c-6fc7-4dce-8e26-88b0c99a62e7", val));
+		return new ProdGroup(BaseObject.executeOperation(auth, "00162333-8331-4a5a-a5d7-83ff9d1a58ae", val));
 	}
 
 }

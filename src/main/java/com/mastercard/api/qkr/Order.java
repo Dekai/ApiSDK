@@ -41,10 +41,10 @@ public class Order extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("bad916c9-636f-4449-8a35-4198e436a5c2", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat", Action.create, Arrays.asList(""), Arrays.asList("")));
-		operationConfigs.put("28921df1-9fe3-4209-822d-d4df89240665", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat/{id}", Action.delete, Arrays.asList(""), Arrays.asList("")));
-		operationConfigs.put("72faf2de-01a8-4ac2-8bea-53f1ca9fa915", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
-		operationConfigs.put("bae31f64-883a-4fe5-9581-6097e21bd893", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat/{id}", Action.update, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("50976754-3a86-4187-b334-b4a3e9a878a3", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("4b52cd59-70c7-4af3-8bbe-e3006ee72b3a", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat/{id}", Action.delete, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("a95e0697-fe35-4946-b07f-7bcc8cc02e81", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat/{id}", Action.read, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("769d6214-cfa1-4067-b484-9e8059d6222e", new OperationConfig("/labs/proxy/qkr2/internal/api2/order/pat/{id}", Action.update, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public Order() {
@@ -101,7 +101,7 @@ public class Order extends BaseObject  {
 	public static Order create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new Order(BaseObject.executeOperation(auth, "bad916c9-636f-4449-8a35-4198e436a5c2", new Order(map)));
+		return new Order(BaseObject.executeOperation(auth, "50976754-3a86-4187-b334-b4a3e9a878a3", new Order(map)));
 	}
 
 
@@ -122,7 +122,7 @@ public class Order extends BaseObject  {
 	public Order delete()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "28921df1-9fe3-4209-822d-d4df89240665", this);
+		BaseObject object = BaseObject.executeOperation(null, "4b52cd59-70c7-4af3-8bbe-e3006ee72b3a", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -140,7 +140,7 @@ public class Order extends BaseObject  {
 	public Order delete(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "28921df1-9fe3-4209-822d-d4df89240665", this);
+		BaseObject object = BaseObject.executeOperation(auth, "4b52cd59-70c7-4af3-8bbe-e3006ee72b3a", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -283,7 +283,7 @@ public class Order extends BaseObject  {
 		Order val = new Order();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Order(BaseObject.executeOperation(auth, "72faf2de-01a8-4ac2-8bea-53f1ca9fa915", val));
+		return new Order(BaseObject.executeOperation(auth, "a95e0697-fe35-4946-b07f-7bcc8cc02e81", val));
 	}
 
 
@@ -297,7 +297,7 @@ public class Order extends BaseObject  {
 	public Order update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "bae31f64-883a-4fe5-9581-6097e21bd893", this);
+		BaseObject object = BaseObject.executeOperation(null, "769d6214-cfa1-4067-b484-9e8059d6222e", this);
 		this.putAll(object);
 		return this;
 	}
@@ -314,7 +314,7 @@ public class Order extends BaseObject  {
 	public Order update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "bae31f64-883a-4fe5-9581-6097e21bd893", this);
+		BaseObject object = BaseObject.executeOperation(auth, "769d6214-cfa1-4067-b484-9e8059d6222e", this);
 		this.putAll(object);
 		return this;
 	}

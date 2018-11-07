@@ -41,7 +41,7 @@ public class Refund extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("bb0091e4-4a63-4c2f-916f-a890ad95cd4b", new OperationConfig("/labs/proxy/qkr2/internal/api2/refund", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("4891bba5-777d-4508-9440-fad0e2dd337a", new OperationConfig("/labs/proxy/qkr2/internal/api2/refund", Action.create, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public Refund() {
@@ -98,7 +98,7 @@ public class Refund extends BaseObject  {
 	public static Refund create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new Refund(BaseObject.executeOperation(auth, "bb0091e4-4a63-4c2f-916f-a890ad95cd4b", new Refund(map)));
+		return new Refund(BaseObject.executeOperation(auth, "4891bba5-777d-4508-9440-fad0e2dd337a", new Refund(map)));
 	}
 
 

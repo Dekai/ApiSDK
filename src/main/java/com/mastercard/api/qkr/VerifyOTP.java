@@ -41,7 +41,7 @@ public class VerifyOTP extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("e2ba91a5-69b0-401b-98b9-182aa3ab5b58", new OperationConfig("/labs/proxy/qkr2/internal/api2/verifyOTP", Action.update, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("8ca64ff9-ec47-47e0-bfd5-60fd0e976e85", new OperationConfig("/labs/proxy/qkr2/internal/api2/verifyOTP", Action.update, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public VerifyOTP() {
@@ -81,7 +81,7 @@ public class VerifyOTP extends BaseObject  {
 	public VerifyOTP update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "e2ba91a5-69b0-401b-98b9-182aa3ab5b58", this);
+		BaseObject object = BaseObject.executeOperation(null, "8ca64ff9-ec47-47e0-bfd5-60fd0e976e85", this);
 		this.putAll(object);
 		return this;
 	}
@@ -98,7 +98,7 @@ public class VerifyOTP extends BaseObject  {
 	public VerifyOTP update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "e2ba91a5-69b0-401b-98b9-182aa3ab5b58", this);
+		BaseObject object = BaseObject.executeOperation(auth, "8ca64ff9-ec47-47e0-bfd5-60fd0e976e85", this);
 		this.putAll(object);
 		return this;
 	}

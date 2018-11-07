@@ -41,7 +41,7 @@ public class OrderAhead extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("72f5906f-3000-43a2-9adf-4c9808ddd068", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderAhead/order", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("340d3f79-26c1-4cea-ae82-a2ad5e71139b", new OperationConfig("/labs/proxy/qkr2/internal/api2/orderAhead/order", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public OrderAhead() {
@@ -98,7 +98,7 @@ public class OrderAhead extends BaseObject  {
 	public static OrderAhead create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new OrderAhead(BaseObject.executeOperation(auth, "72f5906f-3000-43a2-9adf-4c9808ddd068", new OrderAhead(map)));
+		return new OrderAhead(BaseObject.executeOperation(auth, "340d3f79-26c1-4cea-ae82-a2ad5e71139b", new OrderAhead(map)));
 	}
 
 

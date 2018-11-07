@@ -41,11 +41,11 @@ public class Card extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("03b649fa-64c8-43a3-8135-0833f927e7f0", new OperationConfig("/labs/proxy/qkr2/internal/api2/card", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("82fc950a-17fd-4fa2-9336-1011a6673515", new OperationConfig("/labs/proxy/qkr2/internal/api2/card/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("7763aa29-2d41-4061-90fc-56fc9b338554", new OperationConfig("/labs/proxy/qkr2/internal/api2/card", Action.query, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("9860fbf1-2871-46cd-ba4a-732519c67e65", new OperationConfig("/labs/proxy/qkr2/internal/api2/card/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
-		operationConfigs.put("81445247-e2c5-40bf-84c8-070e82b2d2ca", new OperationConfig("/labs/proxy/qkr2/internal/api2/card/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("e694bff4-08c9-4ab2-8aba-7c5143dc199f", new OperationConfig("/labs/proxy/qkr2/internal/api2/card", Action.create, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("4070f8ba-f109-4e95-8c5d-bf81d1b302e9", new OperationConfig("/labs/proxy/qkr2/internal/api2/card/{id}", Action.delete, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("9d01c58d-94b4-49be-836d-b2aa528e9f69", new OperationConfig("/labs/proxy/qkr2/internal/api2/card", Action.query, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("269a54ed-f484-4907-829c-eaae0c90e50f", new OperationConfig("/labs/proxy/qkr2/internal/api2/card/{id}", Action.read, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
+		operationConfigs.put("fdb60b64-9613-4c15-9372-df7f3c42048b", new OperationConfig("/labs/proxy/qkr2/internal/api2/card/{id}", Action.update, Arrays.asList(""), Arrays.asList("X-Auth-Token")));
 	}
 
 	public Card() {
@@ -102,7 +102,7 @@ public class Card extends BaseObject  {
 	public static Card create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new Card(BaseObject.executeOperation(auth, "03b649fa-64c8-43a3-8135-0833f927e7f0", new Card(map)));
+		return new Card(BaseObject.executeOperation(auth, "e694bff4-08c9-4ab2-8aba-7c5143dc199f", new Card(map)));
 	}
 
 
@@ -123,7 +123,7 @@ public class Card extends BaseObject  {
 	public Card delete()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "82fc950a-17fd-4fa2-9336-1011a6673515", this);
+		BaseObject object = BaseObject.executeOperation(null, "4070f8ba-f109-4e95-8c5d-bf81d1b302e9", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -141,7 +141,7 @@ public class Card extends BaseObject  {
 	public Card delete(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "82fc950a-17fd-4fa2-9336-1011a6673515", this);
+		BaseObject object = BaseObject.executeOperation(auth, "4070f8ba-f109-4e95-8c5d-bf81d1b302e9", this);
 		this.clear();
 		this.putAll(object);
 		return this;
@@ -251,7 +251,7 @@ public class Card extends BaseObject  {
 
 		Card val = new Card();
 		if (query != null)  val.putAll(query);
-		return new Card(BaseObject.executeOperation(auth, "7763aa29-2d41-4061-90fc-56fc9b338554", val));
+		return new Card(BaseObject.executeOperation(auth, "9d01c58d-94b4-49be-836d-b2aa528e9f69", val));
 	}
 
 
@@ -321,7 +321,7 @@ public class Card extends BaseObject  {
 		Card val = new Card();
 		if (id != null) val.put("id", id);
 		if (map != null)  val.putAll(map);
-		return new Card(BaseObject.executeOperation(auth, "9860fbf1-2871-46cd-ba4a-732519c67e65", val));
+		return new Card(BaseObject.executeOperation(auth, "269a54ed-f484-4907-829c-eaae0c90e50f", val));
 	}
 
 
@@ -335,7 +335,7 @@ public class Card extends BaseObject  {
 	public Card update()
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(null, "81445247-e2c5-40bf-84c8-070e82b2d2ca", this);
+		BaseObject object = BaseObject.executeOperation(null, "fdb60b64-9613-4c15-9372-df7f3c42048b", this);
 		this.putAll(object);
 		return this;
 	}
@@ -352,7 +352,7 @@ public class Card extends BaseObject  {
 	public Card update(Authentication auth)
 		throws ApiException {
 
-		BaseObject object = BaseObject.executeOperation(auth, "81445247-e2c5-40bf-84c8-070e82b2d2ca", this);
+		BaseObject object = BaseObject.executeOperation(auth, "fdb60b64-9613-4c15-9372-df7f3c42048b", this);
 		this.putAll(object);
 		return this;
 	}

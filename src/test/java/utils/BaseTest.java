@@ -42,6 +42,7 @@ public class BaseTest {
 
 	public static Map<String, RequestMap> responses = new HashMap<String, RequestMap>();
 	public static Map<String, OAuthAuthentication> authentications = new HashMap<String, OAuthAuthentication>();
+	public static List<String> newIgnoreAsserts = new ArrayList<String>();
 
 	static {
 		try {
@@ -58,6 +59,18 @@ public class BaseTest {
 	}
 
 	public static void putResponse(String name, RequestMap response) {
+		 log.info("------------------------------");
+		 log.info("TEST COMPLETE: " + name);
+		 log.info("------------------------------");
+		 log.info("\n\n");
+		 if (newIgnoreAsserts.size() > 0) {
+				 System.out.println("newIgnoreAsserts:");
+				 for(String ignoreAssert : newIgnoreAsserts) {
+						 System.out.println("    \"" + ignoreAssert + "\",");
+				 }
+				 newIgnoreAsserts.clear();
+		}
+
 		responses.put(name, response);
 	}
 
@@ -101,7 +114,16 @@ public class BaseTest {
 
 		if (!ignoreAsserts.contains(key)) {
 
-			Assert.assertTrue(response.get(key).toString().equalsIgnoreCase(expectedValue.toString()));
+        if (response.get(key) != null) {
+            if ( ! response.get(key).toString().equalsIgnoreCase(expectedValue.toString())) {
+                log.error("Response error for " + key + ", expected \"" + expectedValue + "\" got \"" + response.get(key).toString() + "\"");
+                newIgnoreAsserts.add(key);
+            }
+        } else {
+            log.error("Response error for " + key + ", expected \"" + expectedValue + "\" got nothing");
+            newIgnoreAsserts.add(key);
+        }
+        //Assert.assertTrue(response.get(key).toString().equalsIgnoreCase(expectedValue.toString()));
 		}
 	}
 

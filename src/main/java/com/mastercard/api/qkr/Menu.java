@@ -41,7 +41,7 @@ public class Menu extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("a178db6d-4ffb-4a32-b0f8-e21d39831ad3", new OperationConfig("/labs/proxy/qkr2/internal/api2/menu/pat", Action.query, Arrays.asList("menuTypes","merchantName","siteName"), Arrays.asList("")));
+		operationConfigs.put("46039b13-22d9-4cd1-963a-48be9b25ebf5", new OperationConfig("/labs/proxy/qkr2/internal/api2/menu/pat", Action.query, Arrays.asList("menuTypes","merchantName","siteName"), Arrays.asList("")));
 	}
 
 	public Menu() {
@@ -105,7 +105,7 @@ public class Menu extends BaseObject  {
 
 		Menu val = new Menu();
 		if (query != null)  val.putAll(query);
-		return new Menu(BaseObject.executeOperation(auth, "a178db6d-4ffb-4a32-b0f8-e21d39831ad3", val));
+		return new Menu(BaseObject.executeOperation(auth, "46039b13-22d9-4cd1-963a-48be9b25ebf5", val));
 	}
 }
 

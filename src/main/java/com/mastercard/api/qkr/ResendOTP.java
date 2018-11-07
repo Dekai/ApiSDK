@@ -41,7 +41,7 @@ public class ResendOTP extends BaseObject  {
 
 	static {
 		operationConfigs = new HashMap<String, OperationConfig>();
-		operationConfigs.put("f6a0d71d-d996-467a-adfc-56432198e9a8", new OperationConfig("/labs/proxy/qkr2/internal/api2/resendOTP", Action.create, Arrays.asList(""), Arrays.asList("")));
+		operationConfigs.put("c390f464-274d-437f-ab39-c82ca42fdcc6", new OperationConfig("/labs/proxy/qkr2/internal/api2/resendOTP", Action.create, Arrays.asList(""), Arrays.asList("")));
 	}
 
 	public ResendOTP() {
@@ -98,7 +98,7 @@ public class ResendOTP extends BaseObject  {
 	public static ResendOTP create(Authentication auth, RequestMap map)
 		throws ApiException {
 
-		return new ResendOTP(BaseObject.executeOperation(auth, "f6a0d71d-d996-467a-adfc-56432198e9a8", new ResendOTP(map)));
+		return new ResendOTP(BaseObject.executeOperation(auth, "c390f464-274d-437f-ab39-c82ca42fdcc6", new ResendOTP(map)));
 	}
 
 
